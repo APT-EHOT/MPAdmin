@@ -24,6 +24,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -75,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
     private Button buttonAddOrder;
     private Button button;
     private ListView listView;
+    private Switch aSwitch;
+    private TextView tv;
 
     class IOAsyncTask extends AsyncTask<Location, Void, String> {
 
@@ -120,19 +124,23 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
         buttonAddOrder = findViewById(R.id.buttonAddOrder);
         listView = findViewById(R.id.listView);
         destinationText = findViewById(R.id.destinationText);
-        button = findViewById(R.id.button);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        tv = findViewById(R.id.tv);
         locationListener = ll;
         context = this;
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
+        aSwitch = findViewById(R.id.automodeSwitch);
         buttonAddOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 new IOAsyncTask().execute();
+                if (!aSwitch.isChecked()) {
+                    String[] names = {"Андреев Андрей, 1,5 км, 20 мин", "Петров Петр, 2 км, 30 мин", "Иванов Иван, 2,1 км, 32 мин", "Владимиров Владимир, 3 км, 40 мин"};
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
+                            android.R.layout.simple_list_item_1, names);
+                    listView.setAdapter(adapter);
+                    tv.setText("Лучшие результаты:");
+                } else {
+                    tv.setText("Курьер назначен!");
+                }
             }
         });
     }
