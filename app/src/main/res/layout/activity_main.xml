@@ -14,317 +14,323 @@
         android:layout_weight="1"
         android:layout_marginEnd="4dp">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/header1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Форма доставки"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView61"
+                    android:id="@+id/header1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Откуда *" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Форма доставки"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView61"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Откуда *" />
+
+                    <TextView
+                        android:id="@+id/textView81"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Оператор*" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/fromSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/operatorSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ФИО клиента" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Номер клиента *" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/FIOText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/numberText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView81"
+                    android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Оператор*" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-
-                <Spinner
-                    android:id="@+id/fromSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/operatorSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="ФИО клиента" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Номер клиента *" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Адрес доставки *" />
 
                 <EditText
-                    android:id="@+id/FIOText"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/destinationText"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="" />
 
-                <EditText
-                    android:id="@+id/numberText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Адрес доставки *"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <EditText
-                android:id="@+id/destinationText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text=""
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-
-                <EditText
-                    android:id="@+id/podezd"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Подъезд"
-                    android:inputType="textPersonName" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/etazh"
+                    <EditText
+                        android:id="@+id/podezd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Подъезд"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/etazh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Этаж"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Кв/Оф"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/domofon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Домофон"
+                        android:inputType="textPersonName" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Этаж"
-                    android:inputType="textPersonName" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/kv"
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Вид товара" />
+
+                    <TextView
+                        android:id="@+id/textView82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Стоимость" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Кв/Оф"
-                    android:inputType="textPersonName" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/domofon"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Домофон"
-                    android:inputType="textPersonName" />
+                    <Spinner
+                        android:id="@+id/typeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
 
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/editTextTextPersonName91"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="textPersonName" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView62"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Вид товара" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Способ оплаты" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/oplataSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Switch
+                        android:id="@+id/automodeSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Авторежим"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView82"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Стоимость" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-
-                <Spinner
-                    android:id="@+id/typeSpinner"
+                    android:id="@+id/textView24"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Примечание" />
+
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName91"
+                    android:id="@+id/primechText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:ems="10"
-                    android:hint="0"
-                    android:inputType="textPersonName" />
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="\n" />
 
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Способ оплаты"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-
-                <Spinner
-                    android:id="@+id/oplataSpinner"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
 
-                <Switch
-                    android:id="@+id/automodeSwitch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Тариф: 0 Р" />
 
-                    android:text="Авторежим"
-                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+                    <Button
+                        android:id="@+id/buttonAddOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Добавить" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
+        </ScrollView>
 
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Примечание"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
-
-
-            <EditText
-                android:id="@+id/primechText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="\n"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-
-                <TextView
-                    android:id="@+id/textView34"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Тариф: 0 Р" />
-
-                <Button
-                    android:id="@+id/buttonAddOrder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Добавить" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -352,12 +358,23 @@
                 android:layout_marginEnd="8dp"/>
 
             <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1">
+
+            </ListView>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Отправить"
+                android:layout_weight="8"/>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -378,7 +395,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Карта курьеров"
+                android:text="Карта"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="32sp"
                 android:textStyle="bold"
@@ -386,18 +403,16 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"/>
 
-            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:map="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
+            <fragment
                 android:id="@+id/map"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:context=".MapsActivity"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                tools:context=".MainActivity" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
